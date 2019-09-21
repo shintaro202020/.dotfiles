@@ -4,13 +4,15 @@ mkdir .vim && mkdir .vim/colors
 
 ### Set zsh Root Directory
 echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >> ~/.zshenv
-source ~/.zshenv
+export ZDOTDIR=$HOME/.dotfiles/.zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-donenpm install --global pure-prompt
+done
+
+npm install --global pure-prompt
 
 echo "source \"${ZDOTDIR:-$HOME}/.zshcommonrc\"" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
