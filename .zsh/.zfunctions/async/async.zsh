@@ -1,1 +1,0 @@
-/home/eaglys/pure/async.zsh
