@@ -190,8 +190,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # tab complete
-autoload -Uz compinit
-compinit -C
+autoload -U compinit; compinit -C
 HISTSIZE=1000
 SAVEHIST=1000
 
