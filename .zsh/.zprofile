@@ -1,1 +1,1 @@
-/Users/shintaroyoshida/.dotfiles/zsh/.zprezto/runcoms/zprofile
+/Users/shintaroyoshida/.dotfiles/.zsh/.zprezto/runcoms/zprofile

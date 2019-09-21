@@ -1,0 +1,215 @@
+##########################################
+# ALIAS
+##########################################
+alias a='apt'
+alias ag='apt-get'
+alias asdid="aws servicediscovery delete-service --id"
+alias asl="aws servicediscovery list-services"
+alias b="brew"
+alias bd="brew doctor"
+alias cdd="cd ~/.dotfiles/"
+alias cddz="cd ~/.dotfiles/.zsh"
+alias cpr="cp -r "
+alias cprf="cp -rf "
+alias d="docker "
+alias db="docker build"
+alias dc="docker container "
+alias dcla="docker container ls -a "
+alias dcp="docker-compose"
+alias dcpu="docker-compose up"
+alias dcpud="docker-compose up -d"
+alias dcr="docker container run "
+alias dcrit="docker container run -i -t"
+alias delds='find . -name ".DS_Store" | xargs rm'
+alias dg="python manage.py runserver"
+alias di="docker info"
+alias dis="docker images"
+alias dila="docker image ls -a"
+alias dpl="docker pull"
+alias dpsa="docker ps -a "
+alias drmif="docker rmi -f "
+alias drmf="docker rm --force"
+alias e="exit "
+alias g="git"
+alias ga="git add"
+alias gaa="git add *"
+alias gb="git branch"
+alias gba="git branch -a "
+alias gbd="git branch -d "
+alias gch="git checkout"
+alias gchb="git checkout -b " 
+alias gchd="git checkout dev"
+alias gchm="git checkout master" 
+alias gcl="git clone"
+alias gct="git commit"
+alias gctm="git commit -m"
+alias gd="git diff"
+alias gdf="git diff --word-diff"
+alias gf="git fetch"
+alias gi="git init"
+alias gl1="git log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
+alias gl2="git log --graph --all --decorate"
+alias gm="git merge "
+alias gpl="git pull"
+alias gps="git push"
+alias gpsdo="git push --delete origin"
+alias gpsso="git push --set-upstream origin"
+alias gpsuo="git push -u origin"
+alias gpsuom="git push -u origin master"
+alias grh="git reset --hard"
+alias grao="git remote add origin "
+alias gra="git remote add "
+alias grrm="git remote rm"
+alias grm="git rm "
+alias grmc="git rm --cached "
+alias grmf="git rm -f"
+alias grsuo="git remote set-url origin"
+alias grpo="git remote prune origin"
+alias gs="git status"
+alias gsu="git status -uno"
+alias gst="git stash"
+alias jn="jupyter notebook "
+alias k="kubectl"
+alias ka="kubectl apply"
+alias kc="kubectl create"
+alias kd="kubectl delete"
+alias kv="kubectl version"
+alias l="ls"
+alias ll="ls -l"
+alias lla="ls -la"
+alias m="m"
+alias mk="mkdir"
+alias ma="make ai-deploy"
+alias med="make exec-django"
+alias mem="make exec-mysql"
+alias mb="make build"
+alias mp="make proxy-deploy"
+alias m2="make container-run2"
+alias n='nano'
+alias nvs='nvidia-smi'
+alias oa="open -a"
+alias oaa="atom "
+alias oaac="atom ."
+alias oac="open -a Google\ Chrome "
+alias oaf="open -a Finder "
+alias oafc="open -a Finder ."
+alias p="python"
+alias pi="pip"
+alias pil="pip list"
+alias pe="pipenv"
+alias pec="pipenv check"
+alias peg="pipenv graph"
+alias pei="pipenv install "
+alias pel="pipenv lock"
+alias pers="pipenv run start "
+alias perf="pipenv run flask "
+alias perfix="pipenv run fix"
+alias peshe="pipenv shell "
+alias pesyn="pipenv sync"
+alias peui="pipenv uninstall "
+alias pf="pip freeze"
+alias pii="pip install "
+alias piiu="pip install --upgrade"
+alias piiup="pip install --upgrade pip"
+alias piui="pip uninstall"
+alias py="pyenv"
+alias pya="pyenv activate"
+alias pyd="pyenv deactivate"
+alias pydv="pyenv virtualenv-delete"
+alias pyg="pyenv global "
+alias pyi="pyenv install"
+alias pyl="pyenv local "
+alias pyui="pyenv uninstall"
+alias pyv="pyenv version "
+alias pyve="pyenv virtualenv"
+alias pyvs="pyenv versions "
+alias r="reboot"
+alias rmrf="rm -rf "
+alias rmf="rm -f"
+alias s="sudo"
+alias sa="sudo apt"
+alias sag="sudo apt-get"
+alias saar="sudo apt auto-remove"
+alias sai="sudo apt install"
+alias saud="sudo apt update"
+alias saug="sudo apt upgrade"
+alias sag="sudo apt-get"
+alias sagi="sudo apt-get install"
+alias sagud="sudo apt-get update"
+alias sagug="sudo apt-get upgrade"
+alias siV="ssh -i ~/.ssh/VPC_Region_key.pem "
+alias sk="ssh-keygen -t rsa -b 4096 -C 'yoshidashintaro0920@gmail.com'"
+alias sz="source ~/.dotfiles/.zsh/.zshrc"
+alias v="vim"
+alias vd="vim ./Dockerfile"
+alias vgi="vim .gitignore"
+alias vf="vim ~/.dotfiles/.zsh/.functions.sh"
+alias vm="vim ./Makefile"
+alias vv="vim ~/.vimrc"
+alias vz="vim ~/.dotfiles/.zsh/.zshcommonrc"
+alias vpz="vim ~/.dotfiles/.zsh/.zpreztorc"
+alias 3="python"
+alias 3m="python main.py"
+alias 3mf="python main.py flask_uipath"
+alias 3mr="python main.py resp"
+alias 3mn="python manage.py"
+alias 3mnr="python manage.py runserver"
+
+##########################################
+# PYTHON
+##########################################
+### pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+#export PATH="$HOME/.local/bin:$PATH"
+
+##########################################
+# SHELL
+##########################################
+source ~/.dotfiles/.zsh/.functions.sh
+
+##########################################
+# Kaggle
+##########################################
+#export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
+
+##########################################
+# XGBOOST
+##########################################
+export CC=gcc-8
+export CXX=g++-8
+
+##############################
+# pure
+##############################
+fpath=("$ZDOTDIR/.zfunctions" $fpath)
+#fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
+autoload -U promptinit; promptinit
+prompt pure
+
+# tab complete
+autoload -Uz compinit
+compinit -C
+HISTSIZE=1000
+SAVEHIST=1000
+
+##########################################
+# Timer set
+##########################################
+#if (which zprof > /dev/null 2>&1) ;then
+#  zprof
+#fi
+
+##########################################
+# Cuda 
+##########################################
+export PATH=/usr/lib/cuda/bin:${PATH}
+export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:${LD_LIBRARY_PATH}
+
+#########################################
+## Curl
+#########################################
+export PATH="/usr/local/opt/curl/bin:$PATH"
+
