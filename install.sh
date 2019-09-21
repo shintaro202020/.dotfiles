@@ -11,11 +11,12 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 echo "source \"${ZDOTDIR:-$HOME}/.zshcommonrc\"" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
-source ~/.dotfiles/.zsh/.zshrc
+ln -fs ~/.dotfiles/.zsh/.zshrc ~/.zshrc
+source ~/.zshrc
 
 ### Set Vim
 ln -fs ~/.dotfiles/.vimrc ~/.vimrc
-ln -fs ~/.dotfiles/.vim/colors ~/.vim/colors 
+ln -fs ~/.dotfiles/.vim/colors ~/.vim/colors
 
 pyenv install 3.7.4
 pyenv global 3.7.4
