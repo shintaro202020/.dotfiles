@@ -1,6 +1,5 @@
 ### Git clone dotfiles Repository
 ### after install git, curl, vim
-chsh -s $(which zsh)
 mkdir .vim && mkdir .vim/colors
 ln -fs ~/.dotfiles/.zshrc ~/.zshrc
 ln -fs ~/.dotfiles/.vimrc ~/.vimrc
