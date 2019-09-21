@@ -13,9 +13,6 @@ done
 
 echo "source \"${ZDOTDIR:-$HOME}/.zshcommonrc\"" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
-# ln -fs ~/.dotfiles/.zsh/.zshrc ~/.zshrc
-source ~/.dotfiles/.zsh/.zshrc
-# source ~/.zshrc
 
 ### Set Vim
 ln -fs ~/.dotfiles/.vimrc ~/.vimrc
@@ -29,4 +26,5 @@ pyenv install 3.7.4
 pyenv global 3.7.4
 
 pip install --user pipenv
+source ~/.dotfiles/.zsh/.zshrc 
 
