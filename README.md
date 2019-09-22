@@ -5,14 +5,18 @@ git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 source ~/.dotfiles/install.sh 
 ```
 ## Manually Install
-
+### git setup
+```
+git config --global user.email "yoshidashintaro0920@gmail.com"
+git config --global user.name  "Shintaro Yoshida" 
+```
 ### git clone 
 ```
 git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 ```
 ### Create vim directory and root zsh directory
 ```
-mkdir .vim && mkdir .vim/colors
+mkdir .vim
 export ZDOTDIR=$HOME/.dotfiles/.zsh
 export DOTDIR=$HOME/.dotfiles
 ```
