@@ -47,7 +47,7 @@ sed -i.bak "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' 
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc 
 echo '\n###Setup Pure \nautoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
-### __Ubuntu__ Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
+### (__Ubuntu__ Setup Pure, syntax-highlighting, history-substring-search, autosuggestion)
 ```
 sed -i.bak "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
 rm -f $ZDOTDIR/.zpreztorc.bak 
