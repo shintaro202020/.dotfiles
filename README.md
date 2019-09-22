@@ -1,7 +1,7 @@
 # Install 
 ## Automatically Install
 ```
-git clone git@github.com:Shintaro0920/.dotfiles.git 
+git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 source ~/.dotfiles/install.sh 
 ```
 ## Manually Install
@@ -29,8 +29,16 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
 ```
 
-``` Set pure
+### Setup Pure
+```
 sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
+echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
+```
+
+### Setup zshcommonrc and zlogout
+```
+echo "source ${ZDOTDIR:-$HOME}/.zshcommonrc" >>! ${ZDOTDIR:-$HOME}/.zshrc
+echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
 
 mv ~/.vimrc ~/.dotfiles 
 mv ~/.vim/colors ~/.dotfiles 

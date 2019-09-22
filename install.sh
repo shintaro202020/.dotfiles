@@ -19,7 +19,10 @@ done
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
 
-echo "source ${ZDOTDIR:-$HOME}/.zprezto/init.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+### Setup Pure
+sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
+echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
+
 
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonrc" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
