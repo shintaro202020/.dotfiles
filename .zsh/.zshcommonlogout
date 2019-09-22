@@ -2,7 +2,7 @@ docker rm $(docker ps -a -f status=exited -q)
 docker image prune
 
 cd ~/.dotfiles
-git add .* zsh/.* *
+git add .* *
 NOW_TIME=`date "+%Y/%m/%d(%a) %H:%M"`
 git commit -m "$NOW_TIME"
 git push 

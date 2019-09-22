@@ -10,13 +10,21 @@ source ~/.dotfiles/install.sh
 git config --global user.email "yoshidashintaro0920@gmail.com"
 git config --global user.name  "Shintaro Yoshida" 
 ```
+
 ### git clone 
 ```
 git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 ```
+
+### zshenv setup
+```
+echo "\n### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ~/.zshenv
+```
+
 ### Create vim directory and root zsh directory
 ```
-mkdir .vim
+mkdir .vim 
+mkdir .vim && mkdir .vim/colors (on Ubuntu)
 export ZDOTDIR=$HOME/.dotfiles/.zsh
 export DOTDIR=$HOME/.dotfiles
 ```
