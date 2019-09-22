@@ -7,7 +7,7 @@ git config --global user.name  "Shintaro Yoshida"
 git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 
 ### zshenv
-echo "\n### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ~/.zshenv
+echo "### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ~/.zshenv
 
 ### Create vim directory and root zsh directory
 ### Mac Version
