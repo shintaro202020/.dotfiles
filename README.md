@@ -32,6 +32,7 @@ echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
 ### Setup Pure
 ```
 sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
+sed -i '.bak' "s/'prompt'/'syntax-highlighting' \\\'$'\n'prompt'/g" $ZDOTDIR/.zpreztorc 
 echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
 
@@ -45,4 +46,9 @@ echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
 ```
 ln -fs ~/.dotfiles/.vim/.vimrc ~/.vimrc
 ln -fs ~/.dotfiles/.vim/colors ~/.vim/
+```
+
+### Install pyenv and pipenv
+```
+
 ```
