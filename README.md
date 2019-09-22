@@ -18,7 +18,8 @@ export DOTDIR=$HOME/.dotfiles
 ```
 
 ### Install pure
-``` git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/.pure"
+```
+git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/.pure"
 fpath+=(${ZDOTDIR:-$HOME}/.pure)
 ```
 
