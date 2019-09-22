@@ -168,7 +168,7 @@ export PATH="$HOME/.local/bin:$PATH"
 ##########################################
 # SHELL
 ##########################################
-source ~/.dotfiles/.zsh/.functions.sh
+source $DOTDIR/.zsh/.functions.sh
 
 ##########################################
 # Kaggle
