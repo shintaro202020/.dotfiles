@@ -59,4 +59,4 @@ pip install --upgrade pip
 pip install --user --upgrade pipenv
 
 ### Install atom
-apm install --packages-file atomfile
+apm install --packages-file atomfile.txt

@@ -70,5 +70,5 @@ pip install --user --upgrade pipenv
 
 ### Install atom
 ```
-apm install --packages-file $DOTDIR/.atom/atomfile
+apm install --packages-file $DOTDIR/.atom/atomfile.txt
 ```
