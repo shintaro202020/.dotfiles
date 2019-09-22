@@ -41,7 +41,7 @@ echo '### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ${
 ```
 sed -i '.bak' "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc
-sed -i '.bak' -e "s/\'prompt\'/  \'syntax-highlighting\' \\\\ \'history-substring-search\' \\\\ \'autosuggestions\' \\\\ \'prompt\'/g" $ZDOTDIR/.zpreztorc 
+sed -i '.bak' -e "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' \'autosuggestions\' \'prompt\'/g" $ZDOTDIR/.zpreztorc 
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc 
 echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
