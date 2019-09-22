@@ -57,3 +57,6 @@ pyenv install 3.6.8
 pyenv global 3.7.4
 pip install --upgrade pip
 pip install --user --upgrade pipenv
+
+### Install atom
+apm install --packages-file atomfile
