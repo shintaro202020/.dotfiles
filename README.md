@@ -39,7 +39,7 @@ echo "\n### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! 
 echo "\n### Setup dotfiles Root Directory \nexport DOTDIR=$HOME/.dotfiles" >>! ${ZDOTDIR:-$HOME}/.zshrc 
 ```
 
-### Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
+### **Mac** Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
 ```
 sed -i.bak "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc
@@ -47,7 +47,14 @@ sed -i.bak "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' 
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc 
 echo '\n###Setup Pure \nautoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
-
+### **Ubuntu** Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
+```
+sed -i.bak "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
+rm -f $ZDOTDIR/.zpreztorc.bak 
+sed -i.bak "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' \'autosuggestions\' \'prompt\'/g" $ZDOTDIR/.zpreztorc
+rm -f $ZDOTDIR/.zpreztorc.bak 
+echo '\n###Setup Pure \nautoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
+```                                                                                                                                    
 ### Setup zshrc and zlogout
 ```
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonrc" >>! ${ZDOTDIR:-$HOME}/.zshrc
