@@ -10,10 +10,6 @@ export ZDOTDIR=$HOME/.dotfiles/.zsh
 git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/.pure"
 fpath+=(${ZDOTDIR:-$HOME}/.pure)
 
-git clone https://github.com/sindresorhus/.pure.git "${ZDOTDIR:-$HOME}/pure"
-fpath+=(${ZDOTDIR:-$HOME}/.pure)
-### Set zsh Root Directory
-
 ### install zprezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
@@ -21,7 +17,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
 echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
 
 echo "source ${ZDOTDIR:-$HOME}/.zprezto/init.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc

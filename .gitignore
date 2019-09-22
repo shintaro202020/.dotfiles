@@ -1,4 +1,5 @@
 *~
+
 /.zsh/.zprezto
 /.zsh/.zhistory
 /.zsh/.zlogin
@@ -15,3 +16,4 @@
 /.zsh/.zfunctions/
 /.zsh/.zprofile
 /.zsh/.pure
+/.zsh/.zpreztorc.bak

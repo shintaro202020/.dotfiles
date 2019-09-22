@@ -12,7 +12,7 @@ mkdir .vim && mkdir .vim/colors
 export ZDOTDIR=$HOME/.dotfiles/.zsh
 ```
 
-### Set pure
+### Install pure
 ```
 git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/.pure"
 fpath+=(${ZDOTDIR:-$HOME}/.pure)
@@ -29,7 +29,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
 ```
 
-```
+``` Set pure
+sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
+
 mv ~/.vimrc ~/.dotfiles 
 mv ~/.vim/colors ~/.dotfiles 
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc 
