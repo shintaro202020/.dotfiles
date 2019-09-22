@@ -23,13 +23,13 @@ echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
 sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
 echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 
-
+### Setup zshrc and zlogout
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonrc" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
 
 ### Set Vim
-ln -fs ~/.dotfiles/.vimrc ~/.vimrc
-ln -fs ~/.dotfiles/.vim/colors ~/.vim/colors
+ln -fs ~/.dotfiles/.vim/.vimrc ~/.vimrc
+ln -fs ~/.dotfiles/.vim/colors ~/.vim/
 
 ### zsh pure
 npm install --global pure-prompt
