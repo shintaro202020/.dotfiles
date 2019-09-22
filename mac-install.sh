@@ -35,7 +35,7 @@ echo "\n### Setup dotfiles Root Directory \nexport DOTDIR=$HOME/.dotfiles" >>! $
 ### Mac Version
 sed -i '.bak' "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc
-sed -i '.bak' "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' \'autosuggestions\' \'prompt\'/g" $ZDOTDIR/.zpreztorc 
+sed -i '.bak' "s/'prompt'/\'syntax-highlighting\' \'history-substring-search\' \'autosuggestions\' \'prompt\'/g" $ZDOTDIR/.zpreztorc
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc 
 echo '\n###Setup Pure \nautoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 
