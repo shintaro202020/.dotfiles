@@ -1,1 +1,0 @@
-/Users/shintaroyoshida/.dotfiles/.zsh/.zprezto/runcoms/zprofile

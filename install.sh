@@ -1,18 +1,19 @@
 ### Git clone dotfiles Repository
-### after install git, curl, vim
+### after install git, curl, vim and set zsh
 mkdir .vim && mkdir .vim/colors
 
+### install pure
+export ZDOTDIR=$HOME/.dotfiles/.zsh 
+git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/pure"
+fpath+=(${ZDOTDIR:-$HOME}/pure)
 ### Set zsh Root Directory
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-npm install --global pure-prompt
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 echo 'export ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ~/.zshenv
-export ZDOTDIR=$HOME/.dotfiles/.zsh
-chsh -s $(which zsh)
 
 echo "source ${ZDOTDIR:-$HOME}/.zprezto/init.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
