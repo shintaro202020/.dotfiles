@@ -185,9 +185,6 @@ export CXX=g++-8
 # pure
 ##############################
 fpath=("$ZDOTDIR/.zfunctions" $fpath)
-#fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
-autoload -U promptinit; promptinit
-prompt pure
 
 # tab complete
 autoload -U compinit; compinit -C
