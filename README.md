@@ -1,8 +1,10 @@
-## Install Command
+## Install
+
+### Automatically Install
 git clone git@github.com:Shintaro0920/.dotfiles.git
 source ~/.dotfiles/install.sh
 
-## Manually Install
+### Manually Install
 mv ~/.vimrc ~/.dotfiles
 mv ~/.vim/colors ~/.dotfiles
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
