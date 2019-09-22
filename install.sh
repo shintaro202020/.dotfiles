@@ -4,8 +4,8 @@ mkdir .vim && mkdir .vim/colors
 
 ### install pure
 export ZDOTDIR=$HOME/.dotfiles/.zsh 
-git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/pure"
-fpath+=(${ZDOTDIR:-$HOME}/pure)
+git clone https://github.com/sindresorhus/.pure.git "${ZDOTDIR:-$HOME}/pure"
+fpath+=(${ZDOTDIR:-$HOME}/.pure)
 ### Set zsh Root Directory
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
