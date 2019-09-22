@@ -1,7 +1,14 @@
-# Install 
 ## Manually Install
+### git setup
+git config --global user.email "yoshidashintaro0920@gmail.com"
+git config --global user.name  "Shintaro Yoshida" 
+
+### git clone 
+git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
+
 ### Create vim directory and root zsh directory
-mkdir .vim && mkdir .vim/colors
+### Mac Version
+mkdir ~/.vim && mkdir ~/.vim/colors
 export ZDOTDIR=$HOME/.dotfiles/.zsh
 export DOTDIR=$HOME/.dotfiles
 
@@ -19,9 +26,10 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 ### Setup zsh, dotfiles Root Directory 
 echo "\n### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ${ZDOTDIR:-$HOME}/.zshrc
-echo '\n### Setup dotfiles Root Directory \nexport DOTDIR=$HOME/.dotfiles'
+echo "\n### Setup dotfiles Root Directory \nexport DOTDIR=$HOME/.dotfiles" >>! ${ZDOTDIR:-$HOME}/.zshrc 
 
 ### Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
+### Mac Version
 sed -i '.bak' "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc
 sed -i '.bak' "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' \'autosuggestions\' \'prompt\'/g" $ZDOTDIR/.zpreztorc 
@@ -48,4 +56,3 @@ pyenv install 3.7.4
 pyenv install 3.6.8
 pyenv global 3.7.4
 pip install --user --upgrade pipenv
-
