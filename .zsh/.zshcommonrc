@@ -209,3 +209,9 @@ export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:${LD_LIBRARY_PATH}
 #########################################
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
+######################################### 
+## Docker
+######################################### 
+export DOCKER_BUILDKIT=1
+
+
