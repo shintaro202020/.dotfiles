@@ -11,7 +11,7 @@ echo "### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ~/
 
 ### Create vim directory and root zsh directory
 ### Ubuntu Version
-mkdir ~/.vim && mkdir ~/.vim/colors
+mkdir ~/.vim 
 export ZDOTDIR=$HOME/.dotfiles/.zsh
 export DOTDIR=$HOME/.dotfiles
 
