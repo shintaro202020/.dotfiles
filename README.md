@@ -35,13 +35,14 @@ sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
 echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
 
-### Setup zshcommonrc and zlogout
+### Setup zshrc and zlogout
 ```
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonrc" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "source ${ZDOTDIR:-$HOME}/.zshcommonlogout" >>! ${ZDOTDIR:-$HOME}/.zlogout
+```
 
-mv ~/.vimrc ~/.dotfiles 
-mv ~/.vim/colors ~/.dotfiles 
-ln -sf ~/.dotfiles/.vimrc ~/.vimrc 
-ln -sf ~/.dotfiles/colors ~/.vim 
+### Setup Vim
+```
+ln -fs ~/.dotfiles/.vim/.vimrc ~/.vimrc
+ln -fs ~/.dotfiles/.vim/colors ~/.vim/
 ```
