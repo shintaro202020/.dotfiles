@@ -33,9 +33,9 @@ echo "\n### Setup dotfiles Root Directory \nexport DOTDIR=$HOME/.dotfiles" >>! $
 
 ### Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
 ### Ubuntu Version
-sed -i.bak "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
+sed -i.bak "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
 rm -f $ZDOTDIR/.zpreztorc.bak 
-sed -i.bak "s/\'prompt\'/  \'syntax-highlighting\' \'history-substring-search\' \'autosuggestions\' \'prompt\'/g" $ZDOTDIR/.zpreztorc
+sed -i.bak "s/'prompt'/'syntax-highlighting' 'history-substring-search' 'autosuggestions' 'prompt'/g" $ZDOTDIR/.zpreztorc
 rm -f $ZDOTDIR/.zpreztorc.bak 
 echo '\n###Setup Pure \nautoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```                                                                                                                                    
