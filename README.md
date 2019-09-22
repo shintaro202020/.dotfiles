@@ -12,9 +12,8 @@ mkdir .vim && mkdir .vim/colors
 export ZDOTDIR=$HOME/.dotfiles/.zsh
 ```
 
-### Set zsh root directory
+### Set pure
 ```
-export ZDOTDIR=$HOME/.dotfiles/.zsh
 git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/.pure"
 fpath+=(${ZDOTDIR:-$HOME}/.pure)
 ```

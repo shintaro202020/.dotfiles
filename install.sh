@@ -2,8 +2,14 @@
 ### after install git, curl, vim and set zsh
 mkdir .vim && mkdir .vim/colors
 
+### Create vim directory and root zsh directory
+mkdir .vim && mkdir .vim/colors
+export ZDOTDIR=$HOME/.dotfiles/.zsh
+
 ### install pure
-export ZDOTDIR=$HOME/.dotfiles/.zsh 
+git clone https://github.com/sindresorhus/pure.git "${ZDOTDIR:-$HOME}/.pure"
+fpath+=(${ZDOTDIR:-$HOME}/.pure)
+
 git clone https://github.com/sindresorhus/.pure.git "${ZDOTDIR:-$HOME}/pure"
 fpath+=(${ZDOTDIR:-$HOME}/.pure)
 ### Set zsh Root Directory
