@@ -26,14 +26,18 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" 
-echo '### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ZDOTDIR/.zshrc
+```
+
+### Setup zsh Root Directory 
+```
+echo '### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
 
 ### Setup Pure
 ```
-sed -i '.bak' "s/'sorin'/'pure'/g" $ZDOTDIR/.zpreztorc
+sed -i '.bak' "s/\'sorin\'/\'pure\'/g" $ZDOTDIR/.zpreztorc
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc
-sed -i '.bak' "s/'prompt'/'syntax-highlighting' \\\'$'\n'prompt'/g" $ZDOTDIR/.zpreztorc 
+sed -i '.bak' "s/\'prompt\'/\'syntax-highlighting\' \\ \'$'\n\'history-substring-search\' \\ \'$'\n\'autosuggestions\' \\ \'$'\n\'prompt\'/g" $ZDOTDIR/.zpreztorc 
 mv -f $ZDOTDIR/.zpreztorc.bak $ZDOTDIR/.zpreztorc 
 echo 'autoload -U promptinit; promptinit \nprompt pure' >>! ${ZDOTDIR:-$HOME}/.zshrc
 ```
