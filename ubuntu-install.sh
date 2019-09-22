@@ -47,18 +47,18 @@ ln -fs ~/.dotfiles/.vim/.vimrc ~/.vimrc
 ln -fs ~/.dotfiles/.vim/colors ~/.vim/
 
 ### Install pyenv and pipenv
-# git clone https://github.com/pyenv/pyenv.git $DOTDIR/.pyenv
-# git clone https://github.com/pyenv/pyenv-virtualenv.git $DOTDIR/.pyenv/plugins/pyenv-virtualenv
+git clone https://github.com/pyenv/pyenv.git $DOTDIR/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git $DOTDIR/.pyenv/plugins/pyenv-virtualenv
 
 ### Reload Setup
 source ~/.dotfiles/.zsh/.zshrc
 
 ### Install python
-# pyenv install 3.7.4
-# pyenv install 3.6.8
-# pyenv global 3.7.4
-# pip install --upgrade pip 
-# pip install --user --upgrade pipenv
+pyenv install 3.7.4
+pyenv install 3.6.8
+pyenv global 3.7.4
+pip install --upgrade pip 
+pip install --user --upgrade pipenv
 
 ### Install atom
 # apm install --packages-file $DOTDIR/.atom/atomfile.txt
