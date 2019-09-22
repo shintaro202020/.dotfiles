@@ -28,7 +28,6 @@ done
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" 
 
 ### Setup zsh, dotfiles Root Directory 
-echo "\n### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ${ZDOTDIR:-$HOME}/.zshrc
 echo "\n### Setup dotfiles Root Directory \nexport DOTDIR=$HOME/.dotfiles" >>! ${ZDOTDIR:-$HOME}/.zshrc 
 
 ### Setup Pure, syntax-highlighting, history-substring-search, autosuggestion
