@@ -17,3 +17,5 @@
 /.zsh/.zprofile
 /.zsh/.pure
 /.zsh/.zpreztorc.bak
+
+/.pyenv/
