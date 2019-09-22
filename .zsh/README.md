@@ -1,7 +1,10 @@
 # Setup zsh
 ## .zshcommonrc
 ### alias
-### 
+### env
+- pyenv
+- cuda
+- 
 
 ## .zshcommonlogout
 ### When you logout 
