@@ -57,7 +57,7 @@ source ~/.dotfiles/.zsh/.zshrc
 # pyenv install 3.7.4
 # pyenv install 3.6.8
 # pyenv global 3.7.4
-pip3 install --upgrade pip 
+pip3 install --upgrade pip3
 pip3 install --user --upgrade pipenv
 
 ### Install atom
