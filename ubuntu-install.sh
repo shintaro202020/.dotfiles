@@ -54,7 +54,7 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git $DOTDIR/.pyenv/plugins/p
 source ~/.dotfiles/.zsh/.zshrc
 
 ### Pyenv install  
-$PYENV_ROOT/plugins/python-build/install.sh
+/usr/bin/zsh $PYENV_ROOT/plugins/python-build/install.sh
 /usr/local/bin/python-build -v 3.6.8 $PYTHON_ROOT
 
 ### Install python
