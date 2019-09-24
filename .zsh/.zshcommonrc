@@ -1,7 +1,6 @@
 ##########################################
 # ALIAS
-##########################################
-alias a='apt'
+##########################################alias a='apt'
 alias ag='apt-get'
 alias asdid="aws servicediscovery delete-service --id"
 alias asl="aws servicediscovery list-services"
@@ -28,6 +27,7 @@ alias dila="docker image ls -a"
 alias dpl="docker pull"
 alias dpsa="docker ps -a "
 alias drmia="docker rmi $(docker images -a -q)"
+alias drmim="docker rmi $(docker images -a --filter=dangling=true -q)"
 alias drmif="docker rmi -f "
 alias drmf="docker rm --force"
 alias e="exit "
