@@ -7,10 +7,10 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
 
-### Install vim, git, zsh, curl 
+### Install vim, git, zsh, curl, nodejs, npm
 ```
 sudo apt-get update && sudo apt-get upgrade
-sudo apt install vim zsh git curl
+sudo apt install vim zsh git curl nodejs npm
 ```
 
 ### Github Setup
@@ -55,3 +55,10 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
+
+### create docker group and run docker without sudo command
+```
+sudo usermod -g docker yoshida
+sudo /bin/systemctl restart docker.service
+```
+
