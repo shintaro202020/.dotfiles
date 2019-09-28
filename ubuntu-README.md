@@ -7,10 +7,10 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
 
-### Install vim, git, zsh
+### Install vim, git, zsh, curl 
 ```
 sudo apt-get update && sudo apt-get upgrade
-sudo apt install vim zsh git
+sudo apt install vim zsh git curl
 ```
 
 ### Github Setup
@@ -20,4 +20,18 @@ git config --global user.name  "Shintaro Yoshida"
 ssh-keygen -t rsa -b 4096 -C "yoshidashintaro0920@gmail.com"
 <<<Copy Public Key to github Setting>>>
 echo -e 'Host github github.com \n  HostName github.com \n  User git\n  IdentityFile ~/.ssh/--' >> ~/.ssh/config
+ssh -T git@github.com
 ```
+### Install Atom
+``` 
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+```  
+
+### Install Spotify
+```   
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+```   
