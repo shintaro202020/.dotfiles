@@ -62,3 +62,9 @@ sudo usermod -g docker yoshida
 sudo /bin/systemctl restart docker.service
 ```
 
+### Change color of git branch to yellow
+```
+vim ~/.dotfiles/.zsh/.zprezto/modules/prompt/functions/prompt_pure_setup
+git_color = yellow
+
+```
