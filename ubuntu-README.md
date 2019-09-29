@@ -66,5 +66,8 @@ sudo /bin/systemctl restart docker.service
 ```
 vim ~/.dotfiles/.zsh/.zprezto/modules/prompt/functions/prompt_pure_setup
 git_color = yellow
+```
 
+### Others
+```
 ```
