@@ -77,6 +77,12 @@ sudo snap install slack --classic
 ```
 
 ### Install Apache Hadoop
+#### Prerequisites
 ```
 sudo apt-get install ssh pdsh
+```
+#### Install Java
+```
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install default-jdk
 ```

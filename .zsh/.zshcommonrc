@@ -215,4 +215,10 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 ######################################### 
 export DOCKER_BUILDKIT=1
 
+#########################################
+## Hadoop
+#########################################
+# export PATH="~/hadoop-3.2.1/bin:$PATH"
+
+
 
