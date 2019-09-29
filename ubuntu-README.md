@@ -34,7 +34,7 @@ sudo apt-get install atom
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client
-```   
+```
 
 ### Install Docker
 ```
@@ -67,4 +67,13 @@ sudo /bin/systemctl restart docker.service
 vim ~/.dotfiles/.zsh/.zprezto/modules/prompt/functions/prompt_pure_setup
 git_color = yellow
 
+```
+### Install Slack
+```
+sudo snap install slack --classic
+```
+
+### Install Apache Hadoop
+```
+sudo apt-get install ssh pdsh
 ```
