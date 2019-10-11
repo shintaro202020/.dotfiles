@@ -3,6 +3,8 @@
 ```
 git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 source ~/.dotfiles/install.sh 
+or
+/usr/bin/zsh ~/.dotfiles/ubuntu-install.sh
 ```
 
 ## Manually Install
