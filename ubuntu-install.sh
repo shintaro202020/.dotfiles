@@ -58,11 +58,13 @@ source ~/.dotfiles/.zsh/.zshrc
 # /usr/local/bin/python-build -v 3.6.8 $PYTHON_ROOT
 
 ### Install python
-# pyenv install 3.7.4
+pyenv install 3.7.4 -v 
+pyenv install 2.7.3 -v 
 # pyenv install 3.6.8
-# pyenv global 3.7.4
+pyenv global 3.7.4
 # pip3 install --upgrade pip3
 # pip3 install --user --upgrade pipenv
 
 ### Install atom
 # apm install --packages-file $DOTDIR/.atom/atomfile.txt
+

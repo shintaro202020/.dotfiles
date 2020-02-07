@@ -106,3 +106,10 @@ pip install --user --upgrade pipenv
 ```
 apm install --packages-file $DOTDIR/.atom/atomfile.txt
 ```
+
+### Mendeley 
+```
+sudo apt-get update
+sudo apt-get install mendeleydesktop
+```
+
