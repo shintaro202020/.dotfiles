@@ -1,8 +1,14 @@
 # Install 
+## Prerequirement 
+- Git Setup 
+- zsh setup 
+
 ## Automatically Install
 ```
 git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
 source ~/.dotfiles/install.sh 
+or
+/usr/bin/zsh ~/.dotfiles/ubuntu-install.sh
 ```
 
 ## Manually Install
@@ -104,3 +110,10 @@ pip install --user --upgrade pipenv
 ```
 apm install --packages-file $DOTDIR/.atom/atomfile.txt
 ```
+
+### Mendeley 
+```
+sudo apt-get update
+sudo apt-get install mendeleydesktop
+```
+

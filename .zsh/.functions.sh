@@ -24,3 +24,8 @@ function grmgi(){
   git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`
 }
 
+function toggl(){
+  source activate toggl
+  python3 ~/Documents/toggl_api/toggl_to_Gcalendar.py
+  source deactivate 
+}

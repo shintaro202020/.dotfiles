@@ -95,3 +95,5 @@ set nrformats=
 set whichwrap=b,s,h,l,<,>,[,],~
 " バッファスクロール
 set mouse=a
+autocmd ColorScheme * highlight LineNr ctermfg=239
+
