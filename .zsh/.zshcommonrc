@@ -1,6 +1,7 @@
 ##########################################
 # ALIAS
 ##########################################a/1lias a='apt'
+alias a='./a.out'
 alias ag='apt-get'
 alias asdid="aws servicediscovery delete-service --id"
 alias asl="aws servicediscovery list-services"
@@ -10,6 +11,12 @@ alias cdd="cd ~/.dotfiles/"
 alias cddz="cd ~/.dotfiles/.zsh"
 alias cpr="cp -r "
 alias cprf="cp -rf "
+alias caa="cat A.cpp"
+alias cab="cat B.cpp"
+alias cac="cat C.cpp"
+alias cad="cat D.cpp"
+alias cae="cat E.cpp"
+alias caf="cat F.cpp"
 alias d="docker "
 alias db="docker build"
 alias dc="docker container "
@@ -63,6 +70,13 @@ alias gpsdo="git push --delete origin"
 alias gpsso="git push --set-upstream origin"
 alias gpsuo="git push -u origin"
 alias gpsuom="git push -u origin master"
+alias gp="g++"
+alias gpa="g++ A.cpp"
+alias gpb="g++ B.cpp"
+alias gpc="g++ C.cpp"
+alias gpd="g++ D.cpp"
+alias gpe="g++ E.cpp"
+alias gpf="g++ F.cpp"
 alias grh="git reset --hard"
 alias grao="git remote add origin "
 alias gra="git remote add "
@@ -155,8 +169,15 @@ alias sk="ssh-keygen -t rsa -b 4096 -C 'yoshidashintaro0920@gmail.com'"
 alias ssa="ssh atom"
 alias sst="ssh thomas" 
 alias sz="source ~/.dotfiles/.zsh/.zshrc"
+alias t="toggl"
 alias v="vim"
-alias vd="vim ./Dockerfile"
+alias va="vim A.cpp"
+alias vb="vim B.cpp"
+alias vc="vim C.cpp"
+alias vd="vim D.cpp"
+alias ve="vim E.cpp"
+alias vf="vim F.cpp"
+alias vdf="vim ./Dockerfile"
 alias vgi="vim .gitignore"
 alias vf="vim ~/.dotfiles/.zsh/.functions.sh"
 alias vm="vim ./Makefile"
@@ -241,3 +262,9 @@ export DOCKER_BUILDKIT=1
 export PDSH_RCMD_TYPE=ssh
 export HADOOP_HOME='~/hadoop-3.2.1'
 export HADOOP_LOG_DIR=$HADOOP_HOME/logs
+export PATH="/usr/local/opt/inetutils/libexec/gnubin:$PATH"
+
+#########################################
+## Rust 
+#########################################
+source $HOME/.cargo/env
