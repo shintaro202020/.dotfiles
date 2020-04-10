@@ -25,6 +25,8 @@ alias dcr="docker container run "
 alias dcrm="docker container rm"
 alias dcrit="docker container run -i -t"
 alias delds='find . -name ".DS_Store" | xargs rm'
+alias de="docker exec"
+alias deit="docker exec -it"
 alias dg="python manage.py runserver"
 alias di="docker info"
 alias dis="docker images"
@@ -114,7 +116,7 @@ alias pel="pipenv lock"
 alias pers="pipenv run start "
 alias perf="pipenv run flask "
 alias perfix="pipenv run fix"
-alias peshe="pipenv shell "
+alias pesh="pipenv shell "
 alias pesyn="pipenv sync"
 alias peui="pipenv uninstall "
 alias pf="pip freeze"
@@ -133,6 +135,9 @@ alias pyui="pyenv uninstall"
 alias pyv="pyenv version "
 alias pyve="pyenv virtualenv"
 alias pyvs="pyenv versions "
+alias qs="qsub"
+alias qsa="qsub alm.sh"
+alias qst="qstat"
 alias r="reboot"
 alias rmrf="rm -rf "
 alias rmf="rm -f"
@@ -149,7 +154,9 @@ alias sagud="sudo apt-get update"
 alias sagug="sudo apt-get upgrade"
 alias sav="source activate"
 alias savc="source activate cgcnn"
-alias savt="source activate toggl"
+# alias savt="source activate toggl"
+alias savt="cd ~/Desktop/Competitions/kg_tw/src && pipenv shell"
+alias savb="cd ~/Desktop/Competitions/kg_beg/src && pipenv shell"
 alias sdav="source deactivate"
 alias siV="ssh -i ~/.ssh/VPC_Region_key.pem "
 alias sk="ssh-keygen -t rsa -b 4096 -C 'yoshidashintaro0920@gmail.com'"
@@ -166,6 +173,7 @@ alias vz="vim ~/.dotfiles/.zsh/.zshcommonrc"
 alias vpz="vim ~/.dotfiles/.zsh/.zpreztorc"
 alias 2="python"
 alias 3="python3"
+alias 33="python 3_main.py"
 alias 3h="3 hello.py"
 alias 3m="python main.py"
 alias 3mf="python main.py flask_uipath"
@@ -221,7 +229,7 @@ SAVEHIST=1000
 # Cuda 
 ##########################################
 export PATH=/usr/lib/cuda/bin:${PATH}
-export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:${LD_LIBRARY_PATH}
+# export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:${LD_LIBRARY_PATH}
 
 #########################################
 ## Curl
@@ -242,3 +250,33 @@ export HADOOP_HOME='~/hadoop-3.2.1'
 export HADOOP_LOG_DIR=$HADOOP_HOME/logs
 
 export MP_API_KEY=HJeRTc1DFO2t8aoi
+export PATH="/usr/local/cuda/bin/:$PATH"
+
+#########################################
+### Language Setup for Ubuntu 
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+# locale-gen en_US.UTF-8
+# dpkg-reconfigure locales
+#########################################
+
+### For Alamode 
+export SPGLIB_ROOT="/home/yoshida/include/spglib:$SPGLIB_ROOT"
+export LD_LIBRARY_PATH="/home/yoshida/include/spglib/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/lib:$LD_LIBRARY_PATH"
+export PATH="/home/yoshida/etc/alamode-1.1.0/alm:$PATH"
+# export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
+export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
+export PATH="/home/yoshida/etc/alamode-1.1.0/anphon:$PATH"
+export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh:$PATH"
+export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh:$PATH"
+# source /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/compilervars.sh intel64
+
+########################################
+### For Intel MPI and c Compiler 
+########################################
+export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
+source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
+source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
+
