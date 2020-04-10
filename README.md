@@ -1,4 +1,8 @@
 # Install 
+## Prerequirement 
+- Git Setup 
+- zsh setup 
+
 ## Automatically Install
 ```
 git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles

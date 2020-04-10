@@ -60,6 +60,8 @@ source ~/.dotfiles/.zsh/.zshrc
 ### Install python
 pyenv install 3.7.4 -v 
 pyenv install 2.7.3 -v 
+pyenv install anaconda3-5.3.0 -v
+# pyenv install anaconda-3
 # pyenv install 3.6.8
 pyenv global 3.7.4
 # pip3 install --upgrade pip3

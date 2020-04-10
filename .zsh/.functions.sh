@@ -25,7 +25,8 @@ function grmgi(){
 }
 
 function toggl(){
-  source activate toggl
-  python3 ~/Documents/toggl_api/toggl_to_Gcalendar.py
-  source deactivate 
+    source deactivate    
+    source activate toggl
+    python3 ~/Documents/toggl_api/toggl_to_Gcalendar.py
+    source deactivate 
 }
