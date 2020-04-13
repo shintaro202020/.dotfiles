@@ -117,3 +117,7 @@ sudo apt-get update
 sudo apt-get install mendeleydesktop
 ```
 
+### Change color of branch name 
+```~/.dotfiles/.zsh/.zprezto/modules/prompt/functions/prompt_pure_setup
+local git_color=yellow
+```
