@@ -190,6 +190,8 @@ alias vdf="vim ./Dockerfile"
 alias vgi="vim .gitignore"
 alias vf="vim ~/.dotfiles/.zsh/.functions.sh"
 alias vm="vim ./Makefile"
+alias vp="vim ./preprocess_pickle.py"
+alias vcp="vim ./create_pickle.py"
 alias vr="vim README.md"
 alias vv="vim ~/.vimrc"
 alias vz="vim ~/.dotfiles/.zsh/.zshcommonrc"
@@ -204,7 +206,8 @@ alias 3mf="python main.py flask_uipath"
 alias 3mr="python main.py resp"
 alias 3mn="python manage.py"
 alias 3mnr="python manage.py runserver"
-
+alias 3p="python preprocess_pickle.py"
+alias 3cp="python create_pickle.py"
 ##########################################
 # PYTHON
 ##########################################
@@ -308,4 +311,4 @@ source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh in
 #########################################
 ## Rust 
 #########################################
-source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
