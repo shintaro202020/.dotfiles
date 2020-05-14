@@ -3,8 +3,6 @@
 ##########################################a/1lias a='apt'
 alias a='./a.out'
 alias ag='apt-get'
-alias asdid="aws servicediscovery delete-service --id"
-alias asl="aws servicediscovery list-services"
 alias b="brew"
 alias bd="brew doctor"
 alias cdd="cd ~/.dotfiles/"
@@ -19,9 +17,7 @@ alias cae="cat E.cpp"
 alias caf="cat F.cpp"
 alias d="docker "
 alias db="docker build"
-alias dc="docker container "
 alias dcla="docker container ls -a "
-alias dcls="docker container ls"
 alias dcp="docker-compose"
 alias dcpd="docker-compose down"
 alias dcpdr="docker-compose down --remove-orphans"
@@ -29,25 +25,20 @@ alias dcpu="docker-compose up"
 alias dcpud="docker-compose up -d"
 alias dcpuds="docker-compose -f docker-compose-hyper-param.yml up -d"
 alias dcr="docker container run "
-alias dcrm="docker container rm"
 alias dcrit="docker container run -i -t"
-alias delds='find . -name ".DS_Store" | xargs rm'
 alias de="docker exec"
-alias deit="docker exec -it"
-alias dg="python manage.py runserver"
+alias deit="docker exec -it " 
 alias di="docker info"
 alias dis="docker images"
 alias dirm="docker image rm"
 alias dila="docker image ls -a"
 alias dpl="docker pull"
 alias dpsa="docker ps -a "
-alias dr="docker run"
 alias drmia="docker rmi $(docker images -a -q)"
 alias drmim="docker rmi $(docker images -a --filter=dangling=true -q)"
 alias drmif="docker rmi -f "
 alias drmf="docker rm --force"
 alias e="exit "
-alias fr='flask run'
 alias g="git"
 alias ga="git add"
 alias gaa="git add *"
@@ -63,8 +54,6 @@ alias gcl="git clone"
 alias gct="git commit"
 alias gctm="git commit -m"
 alias gd="git diff"
-alias gdf="git diff --word-diff"
-alias gf="git fetch"
 alias gi="git init"
 alias gl1="git log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 alias gl2="git log --graph --all --decorate"
@@ -89,51 +78,27 @@ alias grrm="git remote rm"
 alias grm="git rm "
 alias grmc="git rm --cached "
 alias grmf="git rm -f"
-alias grsuo="git remote set-url origin"
-alias grpo="git remote prune origin"
 alias gs="git status"
 alias gsu="git status -uno"
 alias gst="git stash"
 alias gss="git stash save"
 alias gsp="git stash pop"
 alias jn="jupyter notebook "
-alias k="kubectl"
-alias ka="kubectl apply"
-alias kc="kubectl create"
-alias kd="kubectl delete"
-alias kv="kubectl version"
 alias l="ls"
 alias ll="ls -l"
 alias lla="ls -la"
-alias m="m"
 alias mk="mkdir"
-alias ma="make ai-deploy"
-alias med="make exec-django"
-alias mem="make exec-mysql"
-alias mb="make build"
-alias mp="make proxy-deploy"
-alias m2="make container-run2"
 alias n='nautilus'
 alias nvs='nvidia-smi'
 alias oa="open -a"
-alias oaa="atom "
-alias oaac="atom ."
-alias oac="open -a Google\ Chrome "
 alias oaf="open -a Finder "
-alias oafc="open -a Finder ."
-alias p="python"
-alias pi="pip3"
-alias pil="pip3 list"
+alias p="pbcopy"
+alias pi="pip"
+alias pil="pip list"
 alias pe="pipenv"
-alias pec="pipenv check"
-alias peg="pipenv graph"
 alias pei="pipenv install "
 alias pel="pipenv lock"
-alias pers="pipenv run start "
-alias perf="pipenv run flask "
-alias perfix="pipenv run fix"
 alias pesh="pipenv shell "
-alias pesyn="pipenv sync"
 alias peui="pipenv uninstall "
 alias pf="pip freeze"
 alias pii="pip install "
@@ -141,9 +106,6 @@ alias piiu="pip install --upgrade"
 alias piiup="pip install --upgrade pip"
 alias piui="pip uninstall"
 alias py="pyenv"
-alias pya="pyenv activate"
-alias pydav="pyenv deactivate"
-alias pydv="pyenv virtualenv-delete"
 alias pyg="pyenv global "
 alias pyi="pyenv install"
 alias pyl="pyenv local "
@@ -172,13 +134,10 @@ alias sagug="sudo apt-get upgrade"
 alias sagugy="sudo apt-get upgrade -y"
 alias sav="source activate"
 alias savc="source activate cgcnn"
-# alias savt="source activate toggl"
-alias savt="cd ~/Desktop/Competitions/kg_tw/src && pipenv shell"
-alias savb="cd ~/Desktop/Competitions/kg_beg/src && pipenv shell"
 alias sdav="source deactivate"
-alias siV="ssh -i ~/.ssh/VPC_Region_key.pem "
 alias sk="ssh-keygen -t rsa -b 4096 -C 'yoshidashintaro0920@gmail.com'"
 alias ssa="ssh atom"
+alias sss="ssh sekirei"
 alias sst="ssh thomas" 
 alias sz="source ~/.dotfiles/.zsh/.zshrc"
 alias t="toggl"
@@ -190,17 +149,16 @@ alias vd="vim D.cpp"
 alias ve="vim E.cpp"
 alias vf="vim F.cpp"
 alias vdf="vim ./Dockerfile"
-alias vgi="vim .gitignore"
+alias vgi="vim ./.gitignore"
 alias vf="vim ~/.dotfiles/.zsh/.functions.sh"
 alias vm="vim ./Makefile"
 alias vp="vim ./preprocess_pickle.py"
 alias vcp="vim ./create_pickle.py"
 alias vr="vim README.md"
+alias vs="vim scrape_image.py"
 alias vv="vim ~/.vimrc"
 alias vz="vim ~/.dotfiles/.zsh/.zshcommonrc"
 alias vpz="vim ~/.dotfiles/.zsh/.zpreztorc"
-alias xo="xdg-open"
-alias 2="python"
 alias 3="python3"
 alias 3c="python crystal.py"
 alias 33="python 3_main.py"
@@ -212,6 +170,7 @@ alias 3mn="python manage.py"
 alias 3mnr="python manage.py runserver"
 alias 3p="python preprocess_pickle.py"
 alias 3cp="python create_pickle.py"
+alias 3s="python scrape_image.py"
 ##########################################
 # PYTHON
 ##########################################
@@ -276,13 +235,13 @@ export DOCKER_BUILDKIT=1
 ## Hadoop
 #########################################
 # export PATH="~/hadoop-3.2.1/bin:$PATH"
-export PDSH_RCMD_TYPE=ssh
-export HADOOP_HOME='~/hadoop-3.2.1'
-export HADOOP_LOG_DIR=$HADOOP_HOME/logs
-export PATH="/usr/local/opt/inetutils/libexec/gnubin:$PATH"
-
-export MP_API_KEY=HJeRTc1DFO2t8aoi
-export PATH="/usr/local/cuda/bin/:$PATH"
+# export PDSH_RCMD_TYPE=ssh
+# export HADOOP_HOME='~/hadoop-3.2.1'
+# export HADOOP_LOG_DIR=$HADOOP_HOME/logs
+# export PATH="/usr/local/opt/inetutils/libexec/gnubin:$PATH"
+# 
+# export MP_API_KEY=HJeRTc1DFO2t8aoi
+# export PATH="/usr/local/cuda/bin/:$PATH"
 
 #########################################
 ### Language Setup for Ubuntu 
@@ -294,25 +253,31 @@ export LC_ALL=en_US.UTF-8
 #########################################
 
 ### For Alamode 
-export SPGLIB_ROOT="/home/yoshida/include/spglib:$SPGLIB_ROOT"
-export LD_LIBRARY_PATH="/home/yoshida/include/spglib/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/lib:$LD_LIBRARY_PATH"
-export PATH="/home/yoshida/etc/alamode-1.1.0/alm:$PATH"
+# export SPGLIB_ROOT="/home/yoshida/include/spglib:$SPGLIB_ROOT"
+# export LD_LIBRARY_PATH="/home/yoshida/include/spglib/lib:$LD_LIBRARY_PATH"
+# export LD_LIBRARY_PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/lib:$LD_LIBRARY_PATH"
+# export PATH="/home/yoshida/etc/alamode-1.1.0/alm:$PATH"
+# # export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
 # export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
-export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
-export PATH="/home/yoshida/etc/alamode-1.1.0/anphon:$PATH"
-export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh:$PATH"
-export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh:$PATH"
+# export PATH="/home/yoshida/etc/alamode-1.1.0/anphon:$PATH"
+# export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh:$PATH"
+# export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh:$PATH"
 # source /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/compilervars.sh intel64
 
 ########################################
 ### For Intel MPI and c Compiler 
 ########################################
-export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
-source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
-source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
+#export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
+#source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
+#source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
 
 #########################################
 ## Rust 
 #########################################
-export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
+
+#########################################
+## cbc
+#########################################
+export PATH="/usr/local/cbc/bin/:$PATH"
+
