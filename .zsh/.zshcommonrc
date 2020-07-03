@@ -301,9 +301,9 @@ export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars
 ########################################
 ### For Intel MPI and c Compiler 
 ########################################
-export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
-source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
-source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
+# export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
+# source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
+# source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
 
 #########################################
 ## Rust 
