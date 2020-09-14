@@ -5,12 +5,27 @@ alias a='./a.out'
 alias ag='apt-get'
 alias b="brew"
 alias bd="brew doctor"
+alias bc="/bin/bash convert_CGCNN_hyper_param_to_config_file_with_wandb_api.sh"
+alias br="/bin/bash run_simultaneously_with_tmux.sh"
 alias c="cat"
-alias cdc="cd ~/Desktop/cgcnn && source deactivate && source activate cgcnn"
+alias cdb="cd ~/Desktop/Research/benchmarking-gnns && source deactivate && source activate benchmark_gnn"
+alias cdc="cd ~/Desktop/Research/cgcnn && source deactivate  && source activate wandb_cgcnn37"
+alias cdcc="~/Desktop/Research/chainer-chemistry/examples/qm9 && source deactivate && source activate chainer-chemistry"
 alias cdd="cd ~/.dotfiles/"
 alias cddz="cd ~/.dotfiles/.zsh"
-alias cdgdl="cd ~/Desktop/GDL_code"
-alias cpr="cp -r "
+alias cdi="cd ~/Desktop/internship/"
+alias cdgdl="cd ~/Desktop/internship/GDL_code"
+alias cdm="cd ~/Desktop/Research/megnet/examples && source deactivate && source activate megnet"
+alias cdp="cd ~/Desktop/Research/phonopy/example/Si && source deactivate && source activate phonopy"
+alias cdr="cd ~/Desktop/Research/"
+alias cds="cd ~/Desktop/Research/scgcnn && source deactivate && source activate scgcnn"
+alias cdsch="cd /home/yoshida/Desktop/Research/schnetpack/src/examples && source deactivate && source activate schnetpack"
+alias cdsagan="~/Desktop/internship/self-attention-gan && source deactivate && source activate self-attention-gan"
+alias cdt="cd /home/yoshida/Desktop/Research/simulation_ThermalConductivity/thermal_conductivity && source deactivate && source activate phonopy"
+alias cdtg="cd /home/yoshida/Desktop/internship/TuiGAN-PyTorch && source deactivate && source activate TuiGAN-PyTorch37"
+alias cdi="cd ~/Desktop/internship/"
+alias cm="cat main.py"
+alias cpr="cp run.sh"
 alias cprf="cp -rf "
 alias caa="cat A.cpp"
 alias cab="cat B.cpp"
@@ -25,9 +40,12 @@ alias db="docker build"
 alias dcla="docker container ls -a "
 alias dcp="docker-compose"
 alias dcpd="docker-compose down"
+alias dcpdr="docker-compose down --remove-orphans"
 alias dcpu="docker-compose up"
 alias dcpud="docker-compose up -d"
 alias dcpcud="docker-compose -f docker-compose-cpu.yml up -d"
+alias dcpudscggpu="docker-compose -f docker-compose-hyper-param.yml up -d"
+alias dcpuds="docker-compose -f docker-compose-hyper-param.yml up -d"
 alias dcr="docker container run "
 alias dcrit="docker container run -i -t"
 alias de="docker exec"
@@ -49,6 +67,7 @@ alias g="git"
 alias ga="git add"
 alias gaa="git add *"
 alias gagi="git add .gitignore"
+alias gar="git add README.md"
 alias gb="git branch"
 alias gba="git branch -a "
 alias gbd="git branch -d "
@@ -88,6 +107,7 @@ alias grhh="git reset --hard HEAD"
 alias grao="git remote add origin "
 alias gra="git remote add "
 alias grrm="git remote rm"
+alias grv="git remote -v"
 alias grm="git rm "
 alias grmc="git rm --cached "
 alias grmf="git rm -f"
@@ -152,42 +172,71 @@ alias sav="source activate"
 alias savc="source activate cgcnn"
 alias sdav="source deactivate"
 alias sk="ssh-keygen -t rsa -b 4096 -C 'yoshidashintaro0920@gmail.com'"
+alias skill9="sudo kill -9"
 alias srmrf="sudo rm -rf"
 alias ssa="ssh atom"
 alias sss="ssh sekirei"
 alias sst="ssh thomas" 
 alias sz="source ~/.dotfiles/.zsh/.zshrc"
+alias t="toggl"
+alias tat="tmux a -t"
+alias tk="tmux kill-server"
+alias tkt="tmux kill-session -t"
+alias tl="tmux ls"
+alias tns="tmux new -s"
 alias v="vim"
 alias va="vim A.cpp"
-alias vb="vim B.cpp"
-alias vc="vim C.cpp"
+#alias vb="vim B.cpp"
+alias vb="vim bm_postprocess.py"
+alias vc="vim convert_CGCNN_hyper_param_to_config_file_with_wandb_api.sh"
 alias vd="vim D.cpp"
 alias ve="vim E.cpp"
 alias vf="vim F.cpp"
 alias vdf="vim ./Dockerfile"
 alias vgi="vim ./.gitignore"
+alias vh="vim ./hyper_param_tune.py"
 alias vf="vim ~/.dotfiles/.zsh/.functions.sh"
 alias vt="vim test.py"
 alias vm="vim main.py"
-alias vp="vim plot-obs_vs_pred.py"
+alias vmp="vim mp_tutorial.py"
+alias vp="vim ./preprocess_np_tuple_for_simple_nn.py"
+alias vpc="vim preprocess_np_tuple_for_vanilla_cgcnn.py"
+alias vpn="vim postprocess_from_cif_to_np_tuple.py"
+alias vq="vim ./qm9_tutorial.py"
+alias vqs="vim ./qm9_schnet.py"
 alias vcp="vim ./create_pickle.py"
 alias vr="vim README.md"
+alias vrs="vim run_simultaneously_with_tmux.sh"
 alias vs="vim scrape_image.py"
-alias vsf="vim ~/.ssh/config"
+alias vt="vim test.py"
 alias vv="vim ~/.vimrc"
 alias vz="vim ~/.dotfiles/.zsh/.zshcommonrc"
 alias vpz="vim ~/.dotfiles/.zsh/.zpreztorc"
-alias v2="vim test2.py"
-alias v3="vim test3.py"
-alias v4="vim test4.py"
-alias v5="vim test5.py"
-alias v6="vim test6.py"
+alias vw="vim ./wl_embedding_preprocess.py"
 alias 3="python3"
-alias 3p="python plot-obs_vs_pred.py"
-alias 3s="python science_rcn_py37/run.py"
-alias 3t="3 test.py"
+alias 3b="python bm_postprocess.py"
+alias 3c="python create_descriptor_for_rf.py --dataset sps_264 --tag train_dev_rf+nn+sps"
+alias 33="python 3_main.py"
+alias 3h="3 hello.py"
+alias 3m="python mp_tutorial.py"
+alias 3mp="python mp_tutorial.py --key HJeRTc1DFO2t8aoi --property bulk_moduli"
+# alias 3mp="python mp_tutorial.py --key HJeRTc1DFO2t8aoi --property band_gap"
+alias 3mf="python main.py flask_uipath"
+alias 3mr="python main.py resp"
+alias 3mn="python manage.py"
+alias 3mnr="python manage.py runserver"
+alias 3p="python preprocess_np_tuple_for_simple_nn.py"
+alias 3pc="python preprocess_np_tuple_for_vanilla_cgcnn.py"
+alias 3pn="python postprocess_from_cif_to_np_tuple.py"
+alias 3q="python qm9_tutorial.py"
+alias 3qs="python qm9_schnet.py"
 alias 3cp="python create_pickle.py"
-alias 32="python test2.py"
+alias 3s="python scrape_image.py"
+alias 3si="python setup.py install"
+alias 3sidd="cd ../.. && python setup.py install && cd src/examples"
+alias 3t="python test.py"
+alias 3w="python ./wl_embedding_preprocess.py"
+
 ##########################################
 # PYTHON
 ##########################################
@@ -236,7 +285,8 @@ SAVEHIST=1000
 # Cuda 
 ##########################################
 export PATH=/usr/lib/cuda/bin:${PATH}
-# export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:${LD_LIBRARY_PATH}
+export PATH=/usr/local/cuda-10.1/bin:${PATH}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64:${LD_LIBRARY_PATH}
 
 #########################################
 ## Curl
@@ -270,23 +320,23 @@ export LC_ALL=en_US.UTF-8
 #########################################
 
 ### For Alamode 
-# export SPGLIB_ROOT="/home/yoshida/include/spglib:$SPGLIB_ROOT"
-# export LD_LIBRARY_PATH="/home/yoshida/include/spglib/lib:$LD_LIBRARY_PATH"
-# export LD_LIBRARY_PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/lib:$LD_LIBRARY_PATH"
-# export PATH="/home/yoshida/etc/alamode-1.1.0/alm:$PATH"
-# # export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
+export SPGLIB_ROOT="/home/yoshida/etc/spglib:$SPGLIB_ROOT"
+export LD_LIBRARY_PATH="/home/yoshida/etc/spglib/include/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/lib:$LD_LIBRARY_PATH"
+export PATH="/home/yoshida/etc/alamode-1.1.0/alm:$PATH"
 # export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
-# export PATH="/home/yoshida/etc/alamode-1.1.0/anphon:$PATH"
-# export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh:$PATH"
-# export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh:$PATH"
-# source /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/compilervars.sh intel64
+export PATH="/home/yoshida/etc/qe-6.5/bin:$PATH"
+export PATH="/home/yoshida/etc/alamode-1.1.0/anphon:$PATH"
+export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh:$PATH"
+export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh:$PATH"
+source /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/compilervars.sh intel64
 
 ########################################
 ### For Intel MPI and c Compiler 
 ########################################
-#export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
-#source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
-#source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
+# export PATH="/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64:$PATH"
+# source /opt/intel/compilers_and_libraries_2020.0.166/linux/mpi/intel64/bin/mpivars.sh intel64
+# source /opt/intel/compilers_and_libraries_2020.0.166/linux/mkl/bin/mklvars.sh intel64
 
 #########################################
 ## Rust 
@@ -297,6 +347,8 @@ export LC_ALL=en_US.UTF-8
 ## cbc
 #########################################
 export PATH="/usr/local/cbc/bin/:$PATH"
+export PATH="~/.dotfiles/.pyenv/versions/anaconda3-5.3.1/envs/phonopy/bin/:$PATH"
+export PATH="/home/yoshida/etc/alamode-1.1.0/alm/:$PATH"
 
 #########################################
 ## mysql 8.0
@@ -320,3 +372,21 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export CC=/usr/local/opt/llvm/bin/clang
 export CXX=$CC++
 
+## openbabel
+#########################################
+export PATH="/usr/local/lib:$PATH"
+
+#########################################
+## Nodejs 
+#########################################
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+
+
+#########################################
+## Docker -> AWS ECS Plugin 
+#########################################
+export DOCKER_CLI_EXPERIMENTAL=enabled
+#DOCKER_CLI_EXPERIMENTAL=enabled docker help
+export PATH="/usr/local/lib/docker/cli-plugins/:$PATH"
