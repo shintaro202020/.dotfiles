@@ -21,7 +21,7 @@ function grmdel(){
 }
 
 function grmgi(){
-  git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`
+  git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore` -r
 }
 
 function toggl(){

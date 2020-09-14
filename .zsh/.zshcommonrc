@@ -5,8 +5,11 @@ alias a='./a.out'
 alias ag='apt-get'
 alias b="brew"
 alias bd="brew doctor"
+alias c="cat"
+alias cdc="cd ~/Desktop/cgcnn && source deactivate && source activate cgcnn"
 alias cdd="cd ~/.dotfiles/"
 alias cddz="cd ~/.dotfiles/.zsh"
+alias cdgdl="cd ~/Desktop/GDL_code"
 alias cpr="cp -r "
 alias cprf="cp -rf "
 alias caa="cat A.cpp"
@@ -15,6 +18,8 @@ alias cac="cat C.cpp"
 alias cad="cat D.cpp"
 alias cae="cat E.cpp"
 alias caf="cat F.cpp"
+alias cl="conda list"
+alias cr="cat README.md"
 alias d="docker "
 alias db="docker build"
 alias dcla="docker container ls -a "
@@ -22,10 +27,13 @@ alias dcp="docker-compose"
 alias dcpd="docker-compose down"
 alias dcpu="docker-compose up"
 alias dcpud="docker-compose up -d"
+alias dcpcud="docker-compose -f docker-compose-cpu.yml up -d"
 alias dcr="docker container run "
 alias dcrit="docker container run -i -t"
 alias de="docker exec"
 alias deit="docker exec -it " 
+alias deitdb="docker exec -it db bash"
+alias deitopt="docker exec -it opt bash"
 alias di="docker info"
 alias dis="docker images"
 alias dirm="docker image rm"
@@ -56,6 +64,12 @@ alias gi="git init"
 alias gl1="git log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 alias gl2="git log --graph --all --decorate"
 alias gm="git merge "
+alias gob="go build"
+alias gov="go version"
+alias govd="govendor"
+alias govdi="govendor init"
+alias govdf="govendor fetch"
+alias govdl="govendor list"
 alias gpl="git pull"
 alias gps="git push"
 alias gpsdo="git push --delete origin"
@@ -70,6 +84,7 @@ alias gpd="g++ D.cpp"
 alias gpe="g++ E.cpp"
 alias gpf="g++ F.cpp"
 alias grh="git reset --hard"
+alias grhh="git reset --hard HEAD"
 alias grao="git remote add origin "
 alias gra="git remote add "
 alias grrm="git remote rm"
@@ -81,6 +96,9 @@ alias gsu="git status -uno"
 alias gst="git stash"
 alias gss="git stash save"
 alias gsp="git stash pop"
+alias has="heroku apps" 
+alias hcp="heroku container:push" 
+alias hcr="heroku container:release"
 alias jn="jupyter notebook "
 alias l="ls"
 alias ll="ls -l"
@@ -134,11 +152,11 @@ alias sav="source activate"
 alias savc="source activate cgcnn"
 alias sdav="source deactivate"
 alias sk="ssh-keygen -t rsa -b 4096 -C 'yoshidashintaro0920@gmail.com'"
+alias srmrf="sudo rm -rf"
 alias ssa="ssh atom"
 alias sss="ssh sekirei"
 alias sst="ssh thomas" 
 alias sz="source ~/.dotfiles/.zsh/.zshrc"
-alias t="toggl"
 alias v="vim"
 alias va="vim A.cpp"
 alias vb="vim B.cpp"
@@ -149,18 +167,27 @@ alias vf="vim F.cpp"
 alias vdf="vim ./Dockerfile"
 alias vgi="vim ./.gitignore"
 alias vf="vim ~/.dotfiles/.zsh/.functions.sh"
-alias vm="vim ./Makefile"
-alias vp="vim ./preprocess_pickle.py"
+alias vt="vim test.py"
+alias vm="vim main.py"
+alias vp="vim plot-obs_vs_pred.py"
 alias vcp="vim ./create_pickle.py"
 alias vr="vim README.md"
 alias vs="vim scrape_image.py"
+alias vsf="vim ~/.ssh/config"
 alias vv="vim ~/.vimrc"
 alias vz="vim ~/.dotfiles/.zsh/.zshcommonrc"
 alias vpz="vim ~/.dotfiles/.zsh/.zpreztorc"
+alias v2="vim test2.py"
+alias v3="vim test3.py"
+alias v4="vim test4.py"
+alias v5="vim test5.py"
+alias v6="vim test6.py"
 alias 3="python3"
-alias 3p="python preprocess_pickle.py"
+alias 3p="python plot-obs_vs_pred.py"
+alias 3s="python science_rcn_py37/run.py"
+alias 3t="3 test.py"
 alias 3cp="python create_pickle.py"
-alias 3s="python scrape_image.py"
+alias 32="python test2.py"
 ##########################################
 # PYTHON
 ##########################################
@@ -270,4 +297,26 @@ export LC_ALL=en_US.UTF-8
 ## cbc
 #########################################
 export PATH="/usr/local/cbc/bin/:$PATH"
+
+#########################################
+## mysql 8.0
+#########################################
+export PATH="/usr/local/opt/mysql@8.0/bin/:$PATH"
+
+#########################################
+## Unar 
+#########################################
+export PATH="$HOME/Library/unarMac:$PATH"
+
+#########################################
+## Go
+#########################################
+export GOPATH=$HOME/Library/go
+
+#########################################
+## Clang
+#########################################
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export CC=/usr/local/opt/llvm/bin/clang
+export CXX=$CC++
 
