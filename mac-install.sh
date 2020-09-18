@@ -3,9 +3,6 @@
 git config --global user.email "yoshidashintaro0920@gmail.com"
 git config --global user.name  "Shintaro Yoshida" 
 
-### git clone 
-git clone git@github.com:Shintaro0920/.dotfiles.git ~/.dotfiles
-
 ### zshenv
 echo "### Setup zsh Root Directory \nexport ZDOTDIR=$HOME/.dotfiles/.zsh" >>! ~/.zshenv
 
