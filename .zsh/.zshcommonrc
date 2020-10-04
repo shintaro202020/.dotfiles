@@ -245,12 +245,12 @@ alias 3w="python ./wl_embedding_preprocess.py"
 # PYTHON
 ##########################################
 ### pyenv setup
-export PYENV_ROOT="$DOTDIR/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export PATH="$HOME/.local/bin:$PATH"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+#export PYENV_ROOT="$DOTDIR/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+#export PATH="$HOME/.local/bin:$PATH"
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 ##########################################
 # SHELL
@@ -350,9 +350,9 @@ source /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/compilervars.sh i
 #########################################
 ## cbc
 #########################################
-export PATH="/usr/local/cbc/bin/:$PATH"
-export PATH="~/.dotfiles/.pyenv/versions/anaconda3-5.3.1/envs/phonopy/bin/:$PATH"
-export PATH="/home/yoshida/etc/alamode-1.1.0/alm/:$PATH"
+#export PATH="/usr/local/cbc/bin/:$PATH"
+#export PATH="~/.dotfiles/.pyenv/versions/anaconda3-5.3.1/envs/phonopy/bin/:$PATH"
+#export PATH="/home/yoshida/etc/alamode-1.1.0/alm/:$PATH"
 
 #########################################
 ## mysql 8.0
@@ -394,3 +394,4 @@ export NVM_DIR="$HOME/.nvm"
 export DOCKER_CLI_EXPERIMENTAL=enabled
 #DOCKER_CLI_EXPERIMENTAL=enabled docker help
 export PATH="/usr/local/lib/docker/cli-plugins/:$PATH"
+export PATH="/usr/local/Homebrew/bin/:$PATH"
