@@ -99,3 +99,5 @@ autocmd ColorScheme * highlight LineNr ctermfg=239
 set encoding=utf-8
 set fileencodings=utf-8
 set fileformats=unix,dos,mac
+" For Go
+filetype plugin indent on
