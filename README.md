@@ -124,4 +124,5 @@ local git_color=yellow
 ### Cleanup brew
 ```
 brew cleanup
+brew update && brew upgrade 
 ```
