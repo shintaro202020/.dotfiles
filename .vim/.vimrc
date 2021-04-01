@@ -1,4 +1,8 @@
 syntax on
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+call plug#end()
+
 colorscheme iceberg
 
 " ファイルを上書きする前にバックアップを作ることを無効化
@@ -58,11 +62,11 @@ hi Comment ctermfg=3
 " 入力モードでTabキー押下時に半角スペースを挿入
 set expandtab
 " インデント幅
-set shiftwidth=4
+set shiftwidth=2
 " タブキー押下時に挿入される文字幅を指定
-set softtabstop=4
+set softtabstop=2
 " ファイル内にあるタブ文字の表示幅
-set tabstop=4
+set tabstop=2
 " ツールバーを非表示にする
 set guioptions-=T
 " yでコピーした時にクリップボードに入る
@@ -96,6 +100,6 @@ set whichwrap=b,s,h,l,<,>,[,],~
 " バッファスクロール
 set mouse=a
 autocmd ColorScheme * highlight LineNr ctermfg=239
-set encoding=utf-8
-set fileencodings=utf-8
+set encoding=sjis
+set fileencodings=sjis
 set fileformats=unix,dos,mac
