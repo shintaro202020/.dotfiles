@@ -3,7 +3,11 @@
 ##########################################
 alias bcu="brew cleanup"
 alias bd="brew doctor"
+alias bi="brew install"
 alias bl="brew link"
+alias bls="brew list"
+alias bui="brew uninstall"
+alias buii="brew uninstall --ignore-dependencies"
 alias bud="brew update"
 alias bug="brew upgrade"
 
@@ -20,7 +24,11 @@ alias deit="docker exec -it"
 alias dis="docker images"
 alias drmif="docker rmi -f"
 alias drmf="docker rm -f"
+alias dr="docker run"
 
+alias gor="go run"
+alias gorm="go run main.go"
+alias got="go test"
 alias g="git"
 alias ga="git add"
 alias gaa="git add *"
@@ -53,6 +61,8 @@ alias grhh="git reset --hard HEAD"
 alias gs="git status"
 alias gstp="git stash pop"
 alias gsts="git stash save"
+alias gl="gcloud"
+alias jn="jupyter notebook"
 
 alias l="ls"
 alias ll="ls -l"
@@ -66,7 +76,6 @@ alias mk="mkdir"
 alias nvs="nvidia-smi"
 
 alias oaf="open -a Finder "
-
 alias piiup="pip3 install --upgrade pip3"
 alias pii="pip3 install"
 alias piiu="pip3 install --upgrade"
@@ -116,6 +125,11 @@ alias 3t="python test.py"
 alias 3m="python main.py"
 alias 3h="python hyper-param-tune.py"
 
+alias 3="python"
+alias 3t="python test.py"
+alias 3p="python preprocess.py"
+
+
 ##########################################
 # Custom Function 
 ##########################################
@@ -144,11 +158,6 @@ end
 #set -Ux fish_user_paths "$HOME/opt/anaconda3/bin/" $fish_user_paths
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# <<< conda initialize <<<
-
-
 ##########################################
 # Go Path 
 ##########################################
@@ -158,3 +167,31 @@ end
 #set -Ux fish_user_paths /home/yoshida/.cache/bazelisk/downloads/bazelbuild/bazel-3.1.0-linux-x86_64/bin $fish_user_paths
 #cd Desktop/signate-school-of-fish/
 #cd signate-school-of-fish/
+# eval /Users/shintaroyoshida/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
+
+# The next line updates PATH for the Google Cloud SDK.
+#if [ -f '/Users/shintaroyoshida/google-cloud-sdk/path.fish.inc' ]; . '/Users/shintaroyoshida/google-cloud-sdk/path.fish.inc'; end
+
+## Google Cloud SDK 
+#bass source '/Users/shintaroyoshida/google-cloud-sdk/path.bash.inc'
+#bass source '/Users/shintaroyoshida/google-cloud-sdk/completion.bash.inc'
+
+#set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
+#set -g fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
+# set -Ux fish_user_paths ""/usr/local/Homebrew/opt/mysql@5.7/bin $fish_user_paths
+# if test -d (brew --prefix)"/share/fish/completions"
+#     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
+# end
+# 
+# if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+#     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+# end
+#set -Ux fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
+#
+#set -U GOPATH $HOME/bin/go
+## set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+#set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+#cd ~/Desktop

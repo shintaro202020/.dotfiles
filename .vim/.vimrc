@@ -1,37 +1,28 @@
-syntax on
+
+""" Vim-Plug
+" Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  " Declare the list of plugins.
+  Plug 'junegunn/vim-easy-align'
+  Plug 'mattn/emmet-vim'
+  Plug 'fatih/vim-go'
+" List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+""" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+""" mattn/emmet-vim Environment
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+""" Color Scheme 
+syntax on 
 colorscheme iceberg
 
-" ファイルを上書きする前にバックアップを作ることを無効化
-set nowritebackup
-" ファイルを上書きする前にバックアップを作ることを無効化
-set nobackup
-" vim の矩形選択で文字が無くても右へ進める
-set virtualedit=block
-" 挿入モードでバックスペースで削除できるようにする
-set backspace=indent,eol,start
-" 全角文字専用の設定
-set ambiwidth=double
-" wildmenuオプションを有効(vimバーからファイルを選択できる)
-set wildmenu
-
-"----------------------------------------
-" 検索
-"----------------------------------------
-" 検索するときに大文字小文字を区別しない
-set ignorecase
-" 小文字で検索すると大文字と小文字を無視して検索
-set smartcase
-" 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
-set wrapscan
-" インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
-set incsearch
-" 検索結果をハイライト表示
-set hlsearch
-
+<<<<<<< HEAD
 "----------------------------------------
 " 表示設定
 "----------------------------------------
@@ -103,3 +94,12 @@ autocmd ColorScheme * highlight LineNr ctermfg=239
 set encoding=sjis
 set fileencodings=sjis
 set fileformats=unix,dos,mac
+=======
+""" Column Number 
+set number
+set cursorline
+
+""" Tab Width 
+set tabstop=2
+set shiftwidth=2
+>>>>>>> 8288d4c8a169137b911e2dea82c63d670fdfd951

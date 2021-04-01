@@ -121,3 +121,8 @@ sudo apt-get install mendeleydesktop
 ```~/.dotfiles/.zsh/.zprezto/modules/prompt/functions/prompt_pure_setup
 local git_color=yellow
 ```
+### Cleanup brew
+```
+brew cleanup
+brew update && brew upgrade 
+```
