@@ -10,22 +10,44 @@ alias bui="brew uninstall"
 alias buii="brew uninstall --ignore-dependencies"
 alias bud="brew update"
 alias bug="brew upgrade"
+alias bs="brew services"
+alias bss="brew services start"
 
 alias c="cat"
-alias cdcn="conda create -n "
+alias c1="sh create-step1.sh"
+alias c2="sh create-step2.sh"
+alias c3="sh create-step3.sh"
 alias cda="conda activate"
-alias cdda="conda deactivate"
+alias cde="conda env"
 alias cdel="conda env list"
+alias clean_docker="docker system prune --force ;; docker images -aq | xargs docker rmi"
 alias cf="cat ~/.config/fish/config.fish"
-alias cr="cat README.md"
+alias cppwd="pwd | pbcopy"
 alias code="code-insiders"
+alias codep="code-insiders ."
+alias cr="cat README.md"
 
+alias vdcpfw0="vim ./docker-compose-winker-0.yml"
+
+alias dcleanup=" docker images -aq | xargs docker rmi && docker system prune --yes"
+alias db="docker build"
+alias dcl="docker container ls"
+alias dcla="docker container ls -la"
+alias dcp="docker-compose"
+alias dcpb="docker-compose build"
+alias dcpd="docker-compose down"
+alias dcpdud="docker-compose down && docker-compose up -d"
+alias dcpud="docker-compose up -d"
+alias dcpu="docker-compose up"
+alias dcpudb="docker-compose up -d --build"
+alias decp="docker ecs compose"
 alias deit="docker exec -it"
 alias dis="docker images"
 alias drmif="docker rmi -f"
 alias drmf="docker rm -f"
 alias dr="docker run"
 
+alias gbom="go build -o main"
 alias gor="go run"
 alias gorm="go run main.go"
 alias got="go test"
@@ -33,16 +55,15 @@ alias g="git"
 alias ga="git add"
 alias gaa="git add *"
 alias gagi="git add .gitignore"
+alias gadi="git add .dockerignore"
 alias gba="git branch -a"
 alias gbd="git branch -d"
 alias gch="git checkout"
 alias gchb="git checkout -b"
 alias gchd="git checkout dev"
 alias gchm="git checkout main"
-alias gchms="git checkout master"
 alias gcl="git clone"
 alias gctm="git commit -m"
-alias gcta="git commit --amend"
 alias gi="git init"
 alias gl1="git log --graph--date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 alias gl2="git log --graph--all--decorate"
@@ -52,38 +73,45 @@ alias gps="git push"
 alias gpsuo="git push -u origin"
 alias gpsuom="git push -u origin master"
 alias grm="git rm"
-alias grmc="git rm --cached"
-alias grmcf="git rm --cached -f "
 alias grmo="git remote"
-alias grmov="git remote -v"
+alias grmov="git remote -v" 
+alias grmc="git rm --cached"
+alias grmcr="git rm --cached -r"
 alias grh="git reset --hard"
 alias grhh="git reset --hard HEAD"
+alias grv="git remote -v"
 alias gs="git status"
 alias gstp="git stash pop"
 alias gsts="git stash save"
+
 alias gl="gcloud"
 alias jn="jupyter notebook"
 
 alias l="ls"
 alias ll="ls -l"
-alias lwl="ls | wc -l"
-alias llwl="ls -l | wc -l"
 alias lla="ls -la"
 
-#alias mc="mkdir argv[1] && cd argv[1]"
+alias mc="mkdir argv[1] && cd argv[1]"
 alias mk="mkdir"
 
-alias nvs="nvidia-smi"
+alias n="npm"
+alias ni="npm init"
+alias nr="npm run"
+alias nrs="npm run start"
+alias nrb="npm run build"
 
+alias oaa="open -a Atom "
+alias oaap="open -a Atom ."
+alias oas="open -a Safari "
 alias oaf="open -a Finder "
-alias piiup="pip3 install --upgrade pip3"
-alias pii="pip3 install"
-alias piiu="pip3 install --upgrade"
-alias piui="pip3 uninstall"
-alias piuiy="pip3 uninstall -y"
-alias pil="pip3 list"
-alias pya="pyenv activate"
-alias pyda="pyenv deactivate"
+alias oafp="open -a Finder ."
+alias pip="pip3"
+alias piiup="pip install --upgrade pip"
+alias pii="pip install"
+alias piui="pip uninstall"
+alias piuiy="pip uninstall -y"
+alias pil="pip list"
+alias pbc="pbcopy"
 alias pyv="pyenv version"
 alias pyvs="pyenv versions"
 alias python="python3"
@@ -91,39 +119,27 @@ alias python="python3"
 alias rmrf="rm -rf"
 
 alias s="sudo"
-alias sagud="sudo apt-get update"
-alias sagudy="sudo apt-get update -y"
-alias sagi="sudo apt-get install"
-alias sagug="sudo apt-get upgrade"
-alias sagugy="sudo apt-get upgrade -y"
-alias saar="sudo apt autoremove"
-alias sarp="sudo apt remove --purge"
 alias sf="source ~/.config/fish/config.fish"
+alias ssa="ssh archaic"
 alias ssth="ssh thomas"
-alias ssta="ssh tansy"
-alias srmrf="sudo rm -rf"
+alias sk9="sudo kill -9"
 
 alias t="touch"
 
 alias v="vim"
 alias vf="vim ~/.config/fish/config.fish"
-alias vdcp="vim ./docker-compose.yml"
-alias vd="vim Dockerfile"
-alias vdc="vim docker-compose.yml"
 alias vgi="vim .gitignore"
+alias vdcp="vim docker-compose.yml"
+alias vdgi="vim .dockerignore"
+alias vmg="vim main.go"
 alias vm="vim main.py"
+alias vp="vim preprocess.py"
 alias vr="vim README.md"
 alias vt="vim test.py"
-alias vtr="vim train.py"
-alias vte="vim test.py"
 
-alias w="wandb"
-alias wh="which"
-alias wl="wandb login"
-alias 3="python"
-alias 3t="python test.py"
-alias 3m="python main.py"
-alias 3h="python hyper-param-tune.py"
+alias w="which"
+
+alias ydl="youtube-dl"
 
 alias 3="python"
 alias 3t="python test.py"
@@ -144,8 +160,8 @@ end
 #set -U PYENV_ROOT $DOTDIR/.pyenv
 #set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 #set -Ux fish_user_paths $PYENV_ROOT/shims $fish_user_paths
-##status --is-interactive; and pyenv init - | source
-##status --is-interactive; and pyenv virtualenv-init - | source
+#status --is-interactive; and pyenv init - | source
+#status --is-interactive; and pyenv virtualenv-init - | source
 
 #cd ~/Desktop
 # set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
@@ -158,16 +174,9 @@ end
 #set -Ux fish_user_paths "$HOME/opt/anaconda3/bin/" $fish_user_paths
 
 
-##########################################
-# Go Path 
-##########################################
-#set -Ux GOPATH $HOME/go
-#set -Ux fish_user_paths /usr/local/go/bin $fish_user_paths
-#set -Ux fish_user_paths /home/yoshida/go/bin $fish_user_paths
-#set -Ux fish_user_paths /home/yoshida/.cache/bazelisk/downloads/bazelbuild/bazel-3.1.0-linux-x86_64/bin $fish_user_paths
-#cd Desktop/signate-school-of-fish/
-#cd signate-school-of-fish/
-# eval /Users/shintaroyoshida/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#eval /Users/yoshida/src/miniforge3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 
@@ -190,8 +199,10 @@ end
 # end
 #set -Ux fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
 # set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
-#
-#set -U GOPATH $HOME/bin/go
-## set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-#set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+set -U GOPATH $HOME/src/go
+# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 #cd ~/Desktop
+# set -U fish_user_paths /Users/yoshida/Library/Python/3.9/bin $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
