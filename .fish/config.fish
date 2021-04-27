@@ -20,6 +20,11 @@ alias cf="cat ~/.config/fish/config.fish"
 alias cr="cat README.md"
 alias code="code-insiders"
 
+alias dclean="docker images -aq | xargs docker rmi ;;  docker system prune"
+alias dcl="docker container ls"
+alias dcpd="docker-compose down"
+alias dcpud="docker-compose up -d"
+alias dcpudb="docker-compose up -d --build"
 alias deit="docker exec -it"
 alias dis="docker images"
 alias drmif="docker rmi -f"
@@ -137,61 +142,4 @@ function grmdel
     git rm (git ls-files --deleted)
 end
 
-##########################################
-# PYTHON with pyenv 
-##########################################
-#set -U DOTDIR ~/.dotfiles
-#set -U PYENV_ROOT $DOTDIR/.pyenv
-#set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-#set -Ux fish_user_paths $PYENV_ROOT/shims $fish_user_paths
-##status --is-interactive; and pyenv init - | source
-##status --is-interactive; and pyenv virtualenv-init - | source
-
-#cd ~/Desktop
-# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-#set -Ux fish_user_paths "/usr/local/Homebrew/bin" $fish_user_paths
-
-
-##########################################
-# Anaconda Env 
-##########################################
-#set -Ux fish_user_paths "$HOME/opt/anaconda3/bin/" $fish_user_paths
-
-
-##########################################
-# Go Path 
-##########################################
-#set -Ux GOPATH $HOME/go
-#set -Ux fish_user_paths /usr/local/go/bin $fish_user_paths
-#set -Ux fish_user_paths /home/yoshida/go/bin $fish_user_paths
-#set -Ux fish_user_paths /home/yoshida/.cache/bazelisk/downloads/bazelbuild/bazel-3.1.0-linux-x86_64/bin $fish_user_paths
-#cd Desktop/signate-school-of-fish/
-#cd signate-school-of-fish/
-# eval /Users/shintaroyoshida/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
-
-
-# The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/Users/shintaroyoshida/google-cloud-sdk/path.fish.inc' ]; . '/Users/shintaroyoshida/google-cloud-sdk/path.fish.inc'; end
-
-## Google Cloud SDK 
-#bass source '/Users/shintaroyoshida/google-cloud-sdk/path.bash.inc'
-#bass source '/Users/shintaroyoshida/google-cloud-sdk/completion.bash.inc'
-
-#set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
-#set -g fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
-# set -Ux fish_user_paths ""/usr/local/Homebrew/opt/mysql@5.7/bin $fish_user_paths
-# if test -d (brew --prefix)"/share/fish/completions"
-#     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
-# end
-# 
-# if test -d (brew --prefix)"/share/fish/vendor_completions.d"
-#     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
-# end
-#set -Ux fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
-# set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
-#
-#set -U GOPATH $HOME/bin/go
-## set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-#set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-#cd ~/Desktop
+cd ~/Desktop
