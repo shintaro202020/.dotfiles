@@ -34,8 +34,6 @@ alias code="code-insiders"
 alias codep="code-insiders ."
 alias cr="cat README.md"
 
-alias vdcpfw0="vim ./docker-compose-winker-0.yml"
-
 alias dcleanup=" docker images -aq | xargs docker rmi && docker system prune"
 alias db="docker build"
 alias dcl="docker container ls"
@@ -169,6 +167,7 @@ function grmdel
     git rm (git ls-files --deleted)
 end
 
+cd ~/Desktop
 ##########################################
 # PYTHON with pyenv 
 ##########################################
@@ -216,9 +215,9 @@ end
 #set -Ux fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
 # set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
 
-set -U GOPATH $HOME/src/go
-# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-#cd ~/Desktop
-# set -U fish_user_paths /Users/yoshida/Library/Python/3.9/bin $fish_user_paths
-set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
+#set -U GOPATH $HOME/src/go
+## set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+#set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+##cd ~/Desktop
+## set -U fish_user_paths /Users/yoshida/Library/Python/3.9/bin $fish_user_paths
+#set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
