@@ -110,6 +110,7 @@ alias nrm="npm remove"
 alias nrmg="npm remove -g"
 alias nrs="npm run start"
 alias nrb="npm run build"
+alias nvs="nvidia-smi"
 
 alias oaa="open -a Atom "
 alias oaap="open -a Atom ."
@@ -129,7 +130,10 @@ alias python="python3"
 
 alias rmrf="rm -rf"
 
+
 alias s="sudo"
+alias sagud="sudo apt-get update"
+alias sagug="sudo apt-get upgrade"
 alias sf="source ~/.config/fish/config.fish"
 alias ssa="ssh archaic"
 alias stg="sh tools/go_test.sh"
