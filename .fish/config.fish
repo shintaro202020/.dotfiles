@@ -34,8 +34,11 @@ alias code="code-insiders"
 alias codep="code-insiders ."
 alias cr="cat README.md"
 
+<<<<<<< HEAD
 alias vdcpfw0="vim ./docker-compose-winker-0.yml"
 
+=======
+>>>>>>> f90dab6a56148aabf219265cb981d69e91b304fa
 alias dcleanup=" docker images -aq | xargs docker rmi ;; docker system prune"
 alias db="docker build"
 alias dcl="docker container ls"
@@ -131,7 +134,7 @@ alias l="ls"
 alias ll="ls -l"
 alias lla="ls -la"
 
-alias mc="mkdir argv[1] && cd argv[1]"
+alias mc="mkdir argv[1] ;; cd argv[1]"
 alias mk="mkdir"
 
 alias n="npm"
@@ -144,6 +147,7 @@ alias nrm="npm remove"
 alias nrmg="npm remove -g"
 alias nrs="npm run start"
 alias nrb="npm run build"
+alias nvs="nvidia-smi"
 
 alias oaa="open -a Atom "
 alias oaap="open -a Atom ."
@@ -163,7 +167,10 @@ alias python="python3"
 
 alias rmrf="rm -rf"
 
+
 alias s="sudo"
+alias sagud="sudo apt-get update"
+alias sagug="sudo apt-get upgrade"
 alias sf="source ~/.config/fish/config.fish"
 alias ssa="ssh archaic"
 alias stg="sh tools/go_test.sh"
