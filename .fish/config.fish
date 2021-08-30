@@ -34,11 +34,6 @@ alias code="code-insiders"
 alias codep="code-insiders ."
 alias cr="cat README.md"
 
-<<<<<<< HEAD
-alias vdcpfw0="vim ./docker-compose-winker-0.yml"
-
-=======
->>>>>>> f90dab6a56148aabf219265cb981d69e91b304fa
 alias dcleanup=" docker images -aq | xargs docker rmi ;; docker system prune"
 alias db="docker build"
 alias dcl="docker container ls"
