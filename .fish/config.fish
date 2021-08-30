@@ -34,14 +34,16 @@ alias code="code-insiders"
 alias codep="code-insiders ."
 alias cr="cat README.md"
 
-alias dcleanup=" docker images -aq | xargs docker rmi && docker system prune"
+alias vdcpfw0="vim ./docker-compose-winker-0.yml"
+
+alias dcleanup=" docker images -aq | xargs docker rmi ;; docker system prune"
 alias db="docker build"
 alias dcl="docker container ls"
 alias dcla="docker container ls -la"
 alias dcp="docker-compose"
 alias dcpb="docker-compose build"
 alias dcpd="docker-compose down"
-alias dcpdud="docker-compose down && docker-compose up -d"
+alias dcpdud="docker-compose down ;; docker-compose up -d"
 alias dcpud="docker-compose up -d"
 alias dcpu="docker-compose up"
 alias dcpudb="docker-compose up -d --build"
@@ -89,6 +91,38 @@ alias grv="git remote -v"
 alias gs="git status"
 alias gstp="git stash pop"
 alias gsts="git stash save"
+alias gpp="g++ -std=c++11"
+alias gppa="g++ ./a.cpp"
+alias gppb="g++ ./b.cpp"
+alias gppc="g++ ./c.cpp"
+alias gppd="g++ ./d.cpp"
+alias gppe="g++ ./e.cpp"
+alias gppf="g++ ./f.cpp"
+
+
+alias gl="gcloud"
+alias jn="jupyter notebook"
+alias gppa="g++ ./a.cpp"
+
+
+alias gl="gcloud"
+alias jn="jupyter notebook"
+alias gppa="g++ ./a.cpp"
+
+
+alias gl="gcloud"
+alias jn="jupyter notebook"
+alias gppa="g++ ./a.cpp"
+
+
+alias gl="gcloud"
+alias jn="jupyter notebook"
+alias gppa="g++ ./a.cpp"
+
+
+alias gl="gcloud"
+alias jn="jupyter notebook"
+
 
 alias gl="gcloud"
 alias jn="jupyter notebook"
@@ -134,12 +168,19 @@ alias sf="source ~/.config/fish/config.fish"
 alias ssa="ssh archaic"
 alias stg="sh tools/go_test.sh"
 alias stf="sh tools/go_fmt.sh"
+alias stl="sh tools/go_golangci_lint.sh"
 alias ssth="ssh thomas"
 alias sk9="sudo kill -9"
 
 alias t="touch"
 
 alias v="vim"
+alias vacpp="vim ./a.cpp"
+alias vbcpp="vim ./b.cpp"
+alias vccpp="vim ./c.cpp"
+alias vdcpp="vim ./d.cpp"
+alias vecpp="vim ./e.cpp"
+alias vfcpp="vim ./f.cpp"
 alias vdi="vim .dockerignore"
 alias vf="vim ~/.config/fish/config.fish"
 alias vgi="vim .gitignore"
@@ -167,7 +208,6 @@ function grmdel
     git rm (git ls-files --deleted)
 end
 
-cd ~/Desktop
 ##########################################
 # PYTHON with pyenv 
 ##########################################
@@ -215,9 +255,10 @@ cd ~/Desktop
 #set -Ux fish_user_paths "/usr/local/Homebrew/opt/mysql@5.7/bin" $fish_user_paths
 # set -g fish_user_paths "/usr/local/Homebrew/sbin" $fish_user_paths
 
-#set -U GOPATH $HOME/src/go
-## set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-#set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-##cd ~/Desktop
-## set -U fish_user_paths /Users/yoshida/Library/Python/3.9/bin $fish_user_paths
-#set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
+set -U GOPATH $HOME/src/go
+# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+#cd ~/Desktop
+# set -U fish_user_paths /Users/yoshida/Library/Python/3.9/bin $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
+fish_add_path /opt/homebrew/opt/ruby/bin

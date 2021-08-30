@@ -20,4 +20,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ### Setup Fish 
+mkdir ~/.config
+mkdir ~/.config/fish
 ln -fs ~/.dotfiles/.fish/config.fish ~/.config/fish/config.fish
+sudo apt-get install vim fish
+
+chsh -s /usr/bin/fish
